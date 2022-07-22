@@ -6,4 +6,6 @@ COPY ./my-app/ ./
 
 RUN npm install
 
+RUN npm list -local
+
 CMD ["npm", "run","dev"]

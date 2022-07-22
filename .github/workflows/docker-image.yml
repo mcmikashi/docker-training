@@ -14,5 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker compose
-      run: docker up
+    - name: Build the Docker image
+      run: |
+        docker build . --file Dockerfile.dev --tag myapp
+        docker run myapp npm run test
