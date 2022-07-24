@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --file Dockerfile.dev --tag myapp
-        docker run myapp npm run test
+        docker run myapp npm run coverage
