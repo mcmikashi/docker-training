@@ -9,7 +9,7 @@ test('shows proper heading when rendered', () => {
   render(Counter)
   const button = screen.getByRole('button')
 
-  expect(button).toHaveTextContent('count is 0')
+  expect(button).toHaveTextContent('count : 0')
 
 })
 
@@ -22,5 +22,5 @@ test('changes button text on click', async () => {
   // we have to wait for the next `tick` so that Svelte flushes all pending state changes.
   await fireEvent.click(button)
 
-  expect(button).toHaveTextContent('count is 1')
+  expect(button).toHaveTextContent('count : 1')
 })
